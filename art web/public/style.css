@@ -101,8 +101,9 @@ img {
 }
 
 .overlay h5 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-family: 'Yeseva One', serif;
     color: #55c9d1bb;
 }
 
