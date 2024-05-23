@@ -1,0 +1,130 @@
+
+    <!-- Add your CSS links here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <section class="contact" id="contact">
+        <div class="head1">Stay Connected!</div>
+    
+        <form id="contact-form" name="submit-to-google-sheet">
+            <div class="input-box">
+                <input name="full-name" type="text" id="fullName" placeholder="Full Name">
+                <input name="email" type="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input name="mobile" type="tel" id="mobileNumber" placeholder="Mobile Number">
+                <input name="subject" type="text" id="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="paragraph" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+</section>
+
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>Art Gallery<span>.</span></h3>
+                    <p>
+                        India,<br>
+                        Hyderabad,<br>
+                        Let's do miracle<br><br>
+                        <strong>Github:</strong> aman567mishra<br>
+                        <strong>Email:</strong> aman567mishra@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Realistic Arts</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Frontend Technologies</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Logo Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Social Networks</h4>
+                    <p></p>
+                    <div class="social-links mt-3">
+                        <a href="https://instagram.com/aman_mishra_692" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/aman567mishra" target="_blank" class="linkdin"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/Aman567mishra" target="_blank" class="github"><i class="fa fa-github"></i></a>
+                        <a href="mailto:aman567mishra@gmail.com" target="_blank" class="e-mail"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.youtube.com/@bawalwala7118" target="_blank" class="linkedin"><i class="fa fa-youtube-play"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>AmanArts/AmanMishraArts</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">AMAN MISHRA</a>
+      </div>
+    </div>
+
+</footer>
+
+<!-- Add your JavaScript code here -->
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzPRatXmMx_sgUhDnMV1zF-cyk3biRhSwhzLeXsdRbhFcZDzhBVRrOhm-Wxxx1O2tMQXg/exec';
+    const form = document.forms['submit-to-google-sheet'];
+  
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        // Get form data
+        const fullName = form.elements['fullName'].value.trim();
+        const email = form.elements['email'].value.trim();
+        const mobileNumber = form.elements['mobileNumber'].value.trim();
+        const subject = form.elements['subject'].value.trim();
+        const message = form.elements['message'].value.trim();
+
+        // Check if any field is empty
+        if (!fullName || !email || !mobileNumber || !subject || !message) {
+            alert("Please fill in all fields.");
+            return; // Stop form submission
+        }
+        else{
+            alert("In process of submission");
+        }
+
+        // Proceed with form submission
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+                if (response.ok) {
+                    alert("Thank you! Your form is submitted successfully.");
+                    form.reset(); // Clear form fields
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .catch(error => console.error('Error!', error.message));
+    });
+</script>
+
+
+
+</body>
+</html>

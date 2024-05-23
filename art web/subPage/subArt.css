@@ -1,0 +1,338 @@
+@import url(https://fonts.googleapis.com/css?family=Akronim);
+@import url('https://fonts.googleapis.com/css2?family=Charm&family=Cormorant+Infant&family=Nunito:wght@600&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+
+body {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background: url('/arts/hexagon1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 0px; /* Adjust as needed */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  animation: animateBg 10s linear infinite;
+  z-index: -1; /* Ensure it's behind other content */
+}
+
+@keyframes animateBg {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+
+html, body {
+  height: 100%;
+}
+
+.navbar-brand{
+  width: 12vw;
+  }
+  .navbar{
+  padding: 0px 3vw;
+  }
+  
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+  
+  .custom-toggler-icon {
+    width: 30px;
+    background-color: #fff;
+    margin: 2px;
+    border-radius: 6px;
+    padding: 2px;
+  }
+  
+  @media (max-width:999px){
+    .navbar-brand{
+      width: 20vw;
+    }
+    .navbar{
+      padding-top: 2vh;
+    }
+  }
+  @media (min-width: 1000px){
+    .navbar {
+      padding-top: 5vh;
+      height: 10vh;
+    }
+  }
+
+.wrapper {
+  position: relative;
+  top: 15vh;
+  height: auto;
+  width: 100%;
+  padding-bottom: 2rem; /* Add padding at the bottom of the wrapper */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  margin-bottom: 2rem; /* Add margin-bottom to create space below the container */
+}
+
+.art {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 80%;
+  border: 5px solid white;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  margin-top: 30px;
+}
+
+.art-image {
+  padding: 20px;
+  width: 40%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.art-info {
+  width: 40%;
+  height: 80%;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.art-info h1 {
+  font-family: 'Yeseva One', serif;
+  color: rgb(9, 219, 219);
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.art-info p {
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: "Shalimar", "yeseva one";
+
+
+}
+
+.head1{
+display: flex;
+justify-content: center;
+color: #0ad0bd;
+font-family: 'Yeseva One', serif;
+font-size: 40px;
+}
+
+.cta-button {
+  display: flex;
+  width: 210px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  padding: 15px 20px;
+  margin-top: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+}
+
+.cta-button:hover {
+  background-color: #0b4076;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact {
+  padding: 15rem 0 10rem 0; /* Add padding to the contact section */
+}
+
+
+.contact form {
+  max-width: 50rem;
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  padding: 2rem; /* Increase padding for better spacing */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2); /* Slightly more opaque background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 48%;
+  padding: 1rem;
+  font-size: 1rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.2); /* Slightly more opaque background for inputs */
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for inputs */
+}
+
+.contact form textarea {
+  resize: none;
+  width: 100%;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+
+/* Optional adjustments to buttons for consistency */
+.btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  background: rgb(1, 238, 255); /* Semi-transparent main color */
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem rgb(0, 238, 255); /* Slightly less intense shadow */
+  font-size: 1rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0rem var(--main-color);
+  background-color: rgba(9, 111, 118, 0.816); /* Slightly less transparent on hover */
+  box-shadow: 0 0 1rem rgb(8, 93, 99);
+}
+
+h2 {
+  font-size: 40px;
+  padding-bottom: 10px;
+  font-weight: 30px;
+  display: flex;
+  justify-content: center;
+  color: #0ad0bd;
+  font-family: 'Yeseva One', serif;
+
+}
+
+/* Media query for mobile view */
+
+@media screen and (max-width: 768px) {
+ 
+  .step {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .step-head {
+    height: auto;
+    width: auto;
+    font-size: 50px;
+  }
+
+  .subhead {
+    font-size: 35px;
+  }
+
+  .step-head p {
+    color: #0ad0bd;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  
+  .step-para {
+    text-align: center;
+    font-size: 26px;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .end {
+    text-align: center;
+    font-style: italic;
+    color: #767676;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 999px) {
+  .navbar-brand {
+    width: 30vw;
+  }
+  .wrapper {
+    top: 10vh;
+    height: auto;
+    padding: 1rem; /* Add padding to the wrapper */
+  }
+
+  .art {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin-bottom: 2rem; /* Add margin-bottom to art section */
+  }
+
+  .art-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .art-info{
+    width: 100%;
+    height: auto; 
+  }
+
+  .art-info h1 {
+    font-size: 28px;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+
